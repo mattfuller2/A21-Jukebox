@@ -1,0 +1,77 @@
+# Project 3: Jukebox
+
+* Author: Matt Fuller
+* Class: CS121 Section 6
+* Semester: Spring 2017
+
+## Overview
+
+This Java application develops a class to represent a playlist of songs. 
+
+## Compiling and Using
+
+To compile, execute the following command in the main project directory:
+```
+$ javac Jukebox.java
+```
+
+Run the compiled class with the command:
+```
+$ java Jukebox
+```
+You will be prompted for integer values representing distance to the fire,
+fire intensity, marshmallow burn resistance, and marshmallow sugar density.
+
+## Discussion
+
+I had trouble trying to figure out how to get the total play time
+value from the arraylist.
+  
+I got a invalid index errors and IndexOutOfBoundsExceptions 
+when creating my Playlist class. To fix them, I used a for loop
+to make sure the index was in my arraylist.
+     
+When I imported my files into onyx, I used the command line 
+specified to compile and run my program, but the SongTest.java 
+did not compile. The 15 message errors I recieved were all the same
+displaying that read "cannot find symbol" with the following output.
+  
+     /*  symbol:   class Song
+      *  location: class SongTest
+      *  SongTest.java:161: error: cannot find symbol
+      */     private static void testSetFilePath(Song song)
+                                                      ^      
+At first I was struggling trying to figure out why I kept recieving this 
+message, but after experimenting I figured out I needed to erase the 
+package declaration.                                                                      
+                                                                      
+I am not confident about toString() methods. If we were to pretend there
+is no toString method, I am unsure about when a string will return the address
+rather than the literal string.
+  
+I also found it more challenging to create a class using the provided 
+test class, but I felt like it was more helpful to have to read the code 
+and understand exactly what it wants.
+  
+In this project I learned how to use an ArrayList and I am starting to learn 
+how to use Exceptions. These will be very helpful in future projects. For example, 
+if the prompts the user to enter a specific data type, such as an integer, and
+a character is inputted, the exception will catch the error and inform the 
+user about the error that occurred. If there was not an exception in that 
+situation, the program would have failed.
+
+## Testing
+
+To test the project, execute the following command in the main project directory:
+```
+$ ./autograde.sh
+```
+If you get a "Permission Denied" error, you must make the autograde.sh script executable 
+using the following command.
+```
+
+$ chmod u+x autograde.sh
+```
+
+This will run the project to make sure everything works properly and is will print the 
+results to the console. 
